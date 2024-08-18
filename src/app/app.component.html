@@ -1,0 +1,20 @@
+<h1>{{ title }}</h1>
+
+<h2>a)</h2>
+<table class="styled-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Total Time Worked (hours)</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees" [ngClass]="{'highlight': employee.highlight}">
+      <td>{{ employee.name }}</td>
+      <td>{{ employee.totalTimeWorked }} hrs</td>
+      <td><a href="#">Edit</a></td>
+    </tr>
+  </tbody>
+</table>
+
